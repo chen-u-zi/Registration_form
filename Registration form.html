@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模仿六角學院網站</title>
+    <link rel="stylesheet" href="rscss.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="六角學院logo"> <!-- 記得替換成實際logo路徑 -->
+        </div>
+        <div class="header-right">
+            <a href="#">登錄</a>
+            <a href="#">註冊</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" aria-label="前往首頁">首頁</a></li>
+            <li><a href="#" aria-label="展開課程分類選單">課程分類</a>
+                <ul class="sub-menu">
+                    <li><a href="#" aria-label="查看前端開發課程列表">前端開發</a></li>
+                    <li><a href="#" aria-label="查看後端開發課程列表">後端開發</a></li>
+                </ul>
+            </li>
+            <li><a href="#" aria-label="查看師資力量介紹">師資力量</a></li>
+            <li><a href="#" aria-label="進入學習社區">學習社區</a></li>
+            <li><a href="#" aria-label="聯繫我們">聯繫我們</a></li>
+        </ul>
+    </nav>
+    <article class="course">
+        <img src="course1.jpg" alt="課程1的代表性圖片">
+        <h3>課程名稱1</h3>
+        <p>課程簡介...</p>
+        <a href="#" aria-label="查看課程1詳細信息">查看詳情</a>
+    </article>
+
+    <main>
+        <section class="slider">
+            <img src="logo.png" alt="六角學院網站標誌">
+            <img src="slide1.jpg" alt="輪播圖展示課程相關場景1">
+            <img src="course1.jpg" alt="課程1的代表性圖片">
+            <!-- 更多輪播圖片 -->
+        </section>
+
+        <section class="courses">
+            <h2>熱門課程推薦</h2>
+            <article class="course">
+                <img src="course1.jpg" alt="課程圖片1"> <!-- 替換成實際圖片路徑 -->
+                <h3>課程名稱1</h3>
+                <p>課程簡介...</p>
+                <a href="#">查看詳情</a>
+            </article>
+            <article class="course">
+                <img src="course2.jpg" alt="課程圖片2">
+                <h3>課程名稱2</h3>
+                <p>課程簡介...</p>
+                <a href="#">查看詳情</a>
+            </article>
+            <!-- 更多課程 -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">關於我們</a>
+            <a href="#">隱私政策</a>
+            <a href="#">使用條款</a>
+        </div>
+        <p>&copy; 2025六角學院網站模仿版</p>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slider img");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // 自動切換輪播圖（每3秒切換一張，可調整）
+        setInterval(function () {
+            plusSlides(1);
+        }, 3000);
+    </script>
+</body>
+
+</html>

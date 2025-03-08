@@ -1,0 +1,194 @@
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 头部样式 */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.header-right a {
+  margin-left: 15px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+  color: #007bff;
+}
+
+/* 导航栏样式 */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+nav ul li.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+nav ul li:hover.sub-menu {
+  display: block;
+}
+
+nav ul li.sub-menu li {
+  display: block;
+}
+
+nav ul li.sub-menu li a {
+  padding: 10px 15px;
+  color: #fff;
+}
+
+nav ul li.sub-menu li a:hover {
+  background-color: #555;
+}
+
+/* 主体部分样式 */
+.slider {
+  position: relative;
+  height: 400px;
+  /* 可根据实际需求调整 */
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  animation: fade 1.5s ease-in-out;
+}
+
+.slider img.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.courses {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.course {
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.course h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.course p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.course a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.course a:hover {
+  background-color: #0056b3;
+}
+
+/* 底部样式 */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.course {
+  width: 30%;
+  /* 根据实际需求调整 */
+  margin-bottom: 20px;
+}
